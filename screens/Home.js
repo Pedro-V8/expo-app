@@ -8,8 +8,9 @@ export default function App() {
   return (
     <View style={styles.container}>
         <View style={styles.navBar}>
-            <Icon name="bars" size={27} style={styles.icone}/>
+            <Icon name="bars" size={27} style={styles.iconeB}/>
             <Image source={mlogo} style={styles.logo}/>
+            <Icon name="search" size={27} style={styles.iconeS}/>
         </View>
     </View>
   );
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
 
   navBar: {
     flexDirection: 'row',
-    paddingTop: 75,
+    paddingTop: 70,
     width: '100%',
     backgroundColor: '#161616',
     alignItems: 'center',
@@ -32,14 +33,22 @@ const styles = StyleSheet.create({
 
   },
 
-  icone: {
-    
+  iconeB: {
+    flex:2,
+    color: '#b4ad9d',
+    paddingLeft: 25
+  },
+
+  iconeS: {
+    flex:2,
+    paddingLeft: 30,
     color: '#b4ad9d',
   },
 
   logo: {
-    
-    paddingBottom: 10,
+
+  flex: 5,
+
 
   },
   titulo: {

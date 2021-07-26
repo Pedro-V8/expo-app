@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View , Image } from 'react-native';
+import { StyleSheet, Text, View , Image , Button } from 'react-native';
 import mlogo from '../assets/ml-logo.png'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function App() {
+export default function Home() {
   return (
     <View style={styles.container}>
         <View style={styles.navBar}>
@@ -12,7 +12,13 @@ export default function App() {
             <Image source={mlogo} style={styles.logo}/>
             <Icon name="search" size={27} style={styles.iconeS}/>
         </View>
+
+        <View>
+            <Button title="Go to My Reading"></Button>
+        </View>
     </View>
+
+  
   );
 }
 

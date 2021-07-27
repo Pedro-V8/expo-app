@@ -59,3 +59,5 @@ const styles = StyleSheet.create({
     fontFamily: 'newsgoth_cn_btregular'
   }
 });
+
+

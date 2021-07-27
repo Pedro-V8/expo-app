@@ -12,10 +12,6 @@ export default function Home() {
             <Image source={mlogo} style={styles.logo}/>
             <Icon name="search" size={27} style={styles.iconeS}/>
         </View>
-
-        <View>
-            <Button title="Go to My Reading"></Button>
-        </View>
     </View>
 
   

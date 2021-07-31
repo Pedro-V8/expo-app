@@ -7,22 +7,35 @@ import { StyleSheet, Text, View } from 'react-native';
 import Home from './screens/Home'
 import Reading   from './screens/Reading';
 import { StackView } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import { color } from 'react-native-reanimated';
 
 
 const Tab = createBottomTabNavigator()
 
 function MyTabs(){
   return (
-    <Tab.Navigator tabBarOptions={{ showLabel: false }} style={ styles.optionContainer }>
+    <Tab.Navigator
+      tabBarOptions={{
+        style: {
+          backgroundColor: '#b4ad9d'
+        }
+      }}
+    >
       <Tab.Screen name="Home" component={Home} options={{
         tabBarIcon: ({ focused }) => (
           <View>
-            <Icon name="home" size={30}/>
+            <Icon name="home" size={29}/>
           </View>
         ),
       }}/>
-      <Tab.Screen name="Reading" component={Reading}/>
+      <Tab.Screen name="Reading" component={Reading} options={{
+        tabBarIcon: ({ focused }) => (
+          <View>
+            <Icon name="book-open" size={29} />
+          </View>
+        )     
+      }}/>
     </Tab.Navigator>
   )
 }
@@ -43,7 +56,8 @@ const styles = StyleSheet.create({
     right: 20,
     elevation: 0,
     borderRadius: 15,
-    height: 90
+    height: 100,
+    backgroundColor: '#b4ad9d'
   },
   homeText: {
     color: '#e32f45',

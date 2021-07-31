@@ -1,17 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View , Image , Button } from 'react-native';
+import { StyleSheet, Text, View , Image , Button , ScrollView } from 'react-native';
 import mlogo from '../assets/ml-logo.png'
+import m1 from '../assets/m1.png'
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default function Home() {
   return (
     <View style={styles.container}>
-        <View style={styles.navBar}>
-            <Icon name="bars" size={27} style={styles.iconeB}/>
-            <Image source={mlogo} style={styles.logo}/>
-            <Icon name="search" size={27} style={styles.iconeS}/>
+
+      <View style={styles.navBar}>
+          <Icon name="bars" size={27} style={styles.iconeB}/>
+          <Image source={mlogo} style={styles.logo}/>
+          <Icon name="search" size={27} style={styles.iconeS}/>
+      </View>
+
+      <ScrollView>
+        <View style={styles.showContainer}>
+          <Image source={m1} style={styles.staticImage}/>    
         </View>
+        
+      </ScrollView>
+
+      
+
     </View>
 
   
@@ -48,16 +61,20 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-
-  flex: 5,
-
+    flex: 5,
 
   },
   titulo: {
     color: 'white',
     fontSize: 30,
     fontFamily: 'newsgoth_cn_btregular'
+  },
+
+  staticImage: {
+    height: 150
   }
+
+
 });
 
 
